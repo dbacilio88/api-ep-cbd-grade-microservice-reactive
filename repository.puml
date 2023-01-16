@@ -1,0 +1,13 @@
+@startuml
+interface pe.mil.microservices.repositories.contracts.IGradeRepository {
+~ boolean existsByGradeId(Long)
+}
+class pe.mil.microservices.repositories.entities.GradesEntity {
+- Long gradeId
+- String name
+- String description
+}
+
+
+org.springframework.data.jpa.repository.JpaRepository <|-- pe.mil.microservices.repositories.contracts.IGradeRepository
+@enduml
